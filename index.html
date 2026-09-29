@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">Масаж з виїздом додому в Харкові</title>
+<meta name="description" content="Професійний масаж у вас вдома в Харкові: класичний, розслаблювальний, спортивний, лімфодренажний. Власний масажний стіл, чиста білизна, виїзд у всі райони міста.">
+<meta property="og:title" content="Масаж з виїздом додому в Харкові">
+<meta property="og:description" content="Масажист приїде до вас зі столом і всім необхідним. Запис онлайн, у Telegram, WhatsApp або Viber.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f7f2ec">
+<!-- Мовні версії для Google (замініть ваш-домен.com на свій домен) -->
+<link rel="alternate" hreflang="uk" href="https://ваш-домен.com/">
+<link rel="alternate" hreflang="ru" href="https://ваш-домен.com/?lang=ru">
+<link rel="alternate" hreflang="x-default" href="https://ваш-домен.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Дані для Google (замініть телефон, ім'я та адресу сайту) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Масаж вдома — Ім'я Прізвище",
+  "description": "Масаж з виїздом додому в Харкові",
+  "telephone": "+380000000000",
+  "email": "email@example.com",
+  "url": "https://ваш-домен.com",
+  "areaServed": { "@type": "City", "name": "Харків" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Харків", "addressCountry": "UA" },
+  "openingHours": "Mo-Su 09:00-21:00",
+  "priceRange": "₴₴"
+}
+</script>
+
+<style>
+:root{
+  --bg:#f7f2ec; --surface:#fffaf5; --ink:#2b2420; --muted:#6f625a;
+  --accent:#9c5b3f; --accent-ink:#fff; --accent-soft:#f1e2d8;
+  --sage:#6b7f6a; --sage-soft:#e4eae1; --line:#e6dbd0;
+  --radius:18px; --shadow:0 10px 30px -18px rgba(60,35,20,.35);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,7vw,4.2rem)}
+h2{font-size:clamp(2rem,5vw,2.9rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 1em}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.8em;display:block}
+section{padding:72px 0}
+.lead{color:var(--muted);font-size:1.08rem;max-width:60ch}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:.9em 1.4em;border-radius:999px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font:inherit;font-weight:600;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:#86492f}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn svg{width:18px;height:18px}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:20;background:rgba(247,242,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:var(--serif);font-size:1.4rem;font-weight:700;text-decoration:none;line-height:1.15;min-width:0}
+.logo small{display:block;font-family:var(--sans);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+nav.links{display:none;gap:22px}
+nav.links a{text-decoration:none;font-size:.94rem;color:var(--muted)}
+nav.links a:hover{color:var(--ink)}
+.top .right{display:flex;align-items:center;gap:12px;flex:none}
+.top .btn{padding:.6em 1.1em;font-size:.92rem;display:none}
+@media(min-width:880px){nav.links{display:flex}.top .btn{display:inline-flex}}
+.lang{display:flex;gap:2px;padding:3px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface)}
+.lang button{border:0;background:transparent;font:inherit;font-size:.78rem;font-weight:700;letter-spacing:.04em;padding:.4em .75em;border-radius:999px;cursor:pointer;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+
+/* Hero */
+.hero{padding:48px 0 64px}
+.hero .grid{display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.hero .grid{grid-template-columns:1.2fr .8fr}}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.4em .9em;font-size:.88rem;color:var(--muted)}
+.photo{aspect-ratio:4/5;border-radius:220px 220px var(--radius) var(--radius);background:linear-gradient(160deg,var(--accent-soft),var(--sage-soft));display:grid;place-items:center;color:var(--muted);text-align:center;border:1px solid var(--line);position:relative;overflow:hidden;max-width:420px;width:100%;justify-self:center}
+.photo span{font-size:.9rem;padding:1em}
+.photo svg{position:absolute;bottom:-10px;right:-10px;width:55%;opacity:.35}
+
+/* Cards / grids */
+.grid-3{display:grid;gap:16px}
+@media(min-width:680px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+
+/* Steps */
+.steps{counter-reset:s;display:grid;gap:16px;margin-top:32px}
+@media(min-width:880px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;padding-top:56px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:18px;left:24px;font-family:var(--serif);font-size:2.2rem;color:var(--accent);line-height:1}
+.step h3{font-size:1.25rem}
+.step p{color:var(--muted);font-size:.95rem;margin:0}
+
+/* Services */
+.services{margin-top:32px}
+.service{display:flex;flex-direction:column}
+.service p{color:var(--muted);font-size:.95rem;flex:1}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px dashed var(--line);padding-top:14px;margin-top:6px}
+.price b{font-family:var(--serif);font-size:1.6rem;color:var(--accent);white-space:nowrap}
+.price span{color:var(--muted);font-size:.9rem}
+.service.gift{background:var(--sage);color:#fff;border-color:var(--sage)}
+.service.gift p,.service.gift .price span{color:#e9efe7}
+.service.gift .price{border-color:rgba(255,255,255,.35)}
+.service.gift .price b{color:#fff}
+.note{font-size:.9rem;color:var(--muted);margin-top:20px}
+
+/* About */
+.about .grid{display:grid;gap:32px}
+@media(min-width:880px){.about .grid{grid-template-columns:1fr 1fr}}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--sage-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7f6a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/13px no-repeat}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.certs div{aspect-ratio:3/4;border:1px dashed var(--line);border-radius:12px;display:grid;place-items:center;font-size:.78rem;color:var(--muted);text-align:center;padding:6px;background:var(--surface)}
+
+/* Reviews */
+.review p{font-family:var(--serif);font-size:1.25rem;line-height:1.35;color:var(--ink)}
+.review footer{font-size:.9rem;color:var(--muted)}
+.review .stars{color:var(--accent);letter-spacing:2px;margin-bottom:8px}
+
+/* Contraindications */
+.warn{background:var(--accent-soft);border-color:#e8cfbf}
+.warn ul{margin:0;padding-left:1.2em}
+@media(min-width:680px){.warn ul{columns:2;column-gap:32px}}
+.warn li{margin-bottom:6px;break-inside:avoid}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--accent);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin:10px 0 0}
+
+/* Form */
+.booking{background:var(--ink);color:#f3ece6}
+.booking .lead{color:#c9bcb2}
+.booking .eyebrow{color:#e0a98c}
+.form-grid{display:grid;gap:32px;margin-top:8px}
+@media(min-width:880px){.form-grid{grid-template-columns:.8fr 1.2fr}}
+form{background:var(--surface);color:var(--ink);border-radius:var(--radius);padding:24px;display:grid;gap:16px}
+@media(min-width:560px){form{grid-template-columns:1fr 1fr}}
+.field{display:grid;gap:6px}
+.full{grid-column:1/-1}
+label{font-size:.88rem;font-weight:600}
+input,select,textarea{font:inherit;padding:.75em .9em;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:96px;resize:vertical}
+.radios{display:flex;flex-wrap:wrap;gap:8px}
+.radios label{font-weight:500;border:1.5px solid var(--line);border-radius:999px;padding:.4em .9em;cursor:pointer;display:flex;gap:6px;align-items:center}
+.radios input{width:auto;accent-color:var(--accent)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.88rem;color:var(--muted)}
+.consent input{width:auto;margin-top:4px;accent-color:var(--accent)}
+.hp{position:absolute;left:-9999px}
+.form-status{grid-column:1/-1;border-radius:12px;padding:14px 16px;font-size:.95rem;display:none}
+.form-status.ok{display:block;background:var(--sage-soft)}
+.form-status.err{display:block;background:#f6dcd6}
+.fallback{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.fallback .btn{padding:.55em 1em;font-size:.9rem}
+.side-info p{margin-bottom:.6em}
+
+/* Contacts */
+.contacts{display:grid;gap:12px;margin-top:28px}
+@media(min-width:680px){.contacts{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
+.contact{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;transition:border-color .15s}
+.contact:hover{border-color:var(--accent)}
+.contact .ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff}
+.contact .ic svg{width:20px;height:20px}
+.contact small{display:block;color:var(--muted);font-size:.8rem}
+.contact b{font-weight:600;font-size:.96rem;word-break:break-all}
+
+footer.site{padding:32px 0 110px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+@media(min-width:880px){footer.site{padding-bottom:32px}}
+
+/* Mobile bottom bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,250,245,.96);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:600;font-size:.88rem;padding:.75em .4em;border-radius:12px;border:1.5px solid var(--line)}
+.mbar a.main{background:var(--accent);color:#fff;border-color:var(--accent);flex:1.4}
+@media(min-width:880px){.mbar{display:none}}
+</style>
+</head>
+<body>
+
+<!--
+  ЯК РЕДАГУВАТИ ТЕКСТИ / КАК РЕДАКТИРОВАТЬ ТЕКСТЫ
+  • Український текст — прямо тут, у HTML.
+  • Русский текст — в конце файла, в блоке RU = { ... } (тот же ключ data-i18n).
+  • Контакти та ім'я — у блоці CONFIG наприкінці файлу.
+  • Ціни однакові для обох мов — міняйте прямо в HTML.
+-->
+
+<header class="top">
+  <div class="wrap">
+    <a href="#" class="logo"><span data-text="name">Ім'я Прізвище</span><small data-i18n="logo.sub">Масаж вдома · Харків</small></a>
+    <nav class="links">
+      <a href="#how" data-i18n="nav.how">Як проходить</a>
+      <a href="#services" data-i18n="nav.services">Послуги й ціни</a>
+      <a href="#about" data-i18n="nav.about">Про мене</a>
+      <a href="#faq" data-i18n="nav.faq">Питання</a>
+      <a href="#contacts" data-i18n="nav.contacts">Контакти</a>
+    </nav>
+    <div class="right">
+      <div class="lang" role="group" aria-label="Мова / Язык">
+        <button type="button" data-lang="uk" aria-pressed="true">UA</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
+      <a href="#booking" class="btn btn-primary" data-i18n="btn.book">Записатися</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Виїзд по всьому Харкову</span>
+      <h1 data-i18n="hero.title">Масаж у вас вдома — <em>без дороги й поспіху</em></h1>
+      <p class="lead" data-i18n="hero.lead">Приїду в зручний час із власним масажним столом, чистою білизною та оліями. Вам залишається лише розслабитися — а після сеансу нікуди не треба їхати.</p>
+      <div class="cta">
+        <a href="#booking" class="btn btn-primary" data-i18n="hero.book">Записатися на сеанс</a>
+        <a href="#" class="btn btn-ghost" data-link="phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          <span data-i18n="btn.call">Зателефонувати</span>
+        </a>
+      </div>
+      <ul class="chips">
+        <li data-i18n="chip.1">Власний стіл і чиста білизна</li>
+        <li data-i18n="chip.2">Щодня 9:00–21:00</li>
+        <li data-i18n="chip.3">Усі райони міста</li>
+      </ul>
+    </div>
+    <div class="photo">
+      <!-- Замініть на своє фото: <img src="photo.jpg" alt="" style="width:100%;height:100%;object-fit:cover"> -->
+      <span data-i18n="hero.photo">Ваше фото<br>(вертикальне, 4:5)</span>
+      <svg viewBox="0 0 200 200" fill="none" stroke="#6b7f6a" stroke-width="2"><path d="M100 180c-40-30-60-70-40-120 30 20 45 60 40 120zM100 180c40-30 60-70 40-120-30 20-45 60-40 120z"/><path d="M100 180V70"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" style="padding-top:24px">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="how.eyebrow">Як проходить виїзд</span>
+    <h2 data-i18n="how.title">Чотири прості кроки</h2>
+    <div class="steps">
+      <div class="card step"><h3 data-i18n="how.1t">Заявка</h3><p data-i18n="how.1">Залиште заявку на сайті або напишіть у месенджер. Відповім протягом години.</p></div>
+      <div class="card step"><h3 data-i18n="how.2t">Узгоджуємо деталі</h3><p data-i18n="how.2">Уточнимо вид масажу, час, адресу та чи є протипоказання.</p></div>
+      <div class="card step"><h3 data-i18n="how.3t">Приїжджаю до вас</h3><p data-i18n="how.3">Потрібне лише вільне місце близько 2×2 м. Усе інше привезу з собою.</p></div>
+      <div class="card step"><h3 data-i18n="how.4t">Сеанс і відпочинок</h3><p data-i18n="how.4">Після масажу можна одразу лягти відпочивати — нікуди не треба їхати.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="srv.eyebrow">Послуги й ціни</span>
+    <h2 data-i18n="srv.title">Оберіть свій масаж</h2>
+    <p class="lead" data-i18n="srv.lead">Ціна вказана з виїздом у межах міста. Час — чистий час масажу, без підготовки.</p>
+    <!-- Ціни нижче — приблизні, замініть на свої (вони однакові для обох мов) -->
+    <div class="grid-3 services">
+      <div class="card service"><h3 data-i18n="srv.1t">Класичний масаж усього тіла</h3><p data-i18n="srv.1">Спина, шия, руки, ноги. Знімає напругу й утому, покращує кровообіг.</p><div class="price"><span><span>60</span> <span data-i18n="min">хв</span></span><b>900 грн</b></div></div>
+      <div class="card service"><h3 data-i18n="srv.2t">Спина та шийно-комірцева зона</h3><p data-i18n="srv.2">Для тих, хто багато сидить за комп'ютером. Допомагає при затиснутості плечей і шиї.</p><div class="price"><span><span>40</span> <span data-i18n="min">хв</span></span><b>600 грн</b></div></div>
+      <div class="card service"><h3 data-i18n="srv.3t">Розслаблювальний масаж</h3><p data-i18n="srv.3">М'які повільні техніки з ароматичними оліями. Для глибокого відпочинку й сну.</p><div class="price"><span><span>60 / 90</span> <span data-i18n="min">хв</span></span><b>950 / 1300 грн</b></div></div>
+      <div class="card service"><h3 data-i18n="srv.4t">Спортивний масаж</h3><p data-i18n="srv.4">Відновлення після тренувань, робота із забитими м'язами.</p><div class="price"><span><span>60</span> <span data-i18n="min">хв</span></span><b>1000 грн</b></div></div>
+      <div class="card service"><h3 data-i18n="srv.5t">Лімфодренажний масаж</h3><p data-i18n="srv.5">Зменшує набряклість і відчуття важкості в ногах.</p><div class="price"><span><span>60</span> <span data-i18n="min">хв</span></span><b>1000 грн</b></div></div>
+      <div class="card service gift"><h3 data-i18n="srv.6t">Подарунковий сертифікат</h3><p data-i18n="srv.6">Подаруйте близькій людині годину відпочинку. Діє 3 місяці, на будь-який вид масажу.</p><div class="price"><span data-i18n="srv.anysum">будь-яка сума</span><b><span data-i18n="from">від</span> 600 грн</b></div></div>
+    </div>
+    <p class="note" data-i18n="srv.note">Виїзд у віддалені райони та передмістя — доплата ___ грн. Абонемент на 5 сеансів — знижка 10%.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow" data-i18n="about.eyebrow">Про мене</span>
+      <h2><span data-i18n="about.hello">Вітаю, я</span> <span data-text="firstName">Ім'я</span></h2>
+      <p class="lead" data-i18n="about.lead">Масажист із досвідом ___ років. Коротко про себе: де навчалися, на чому спеціалізуєтеся, чому обрали роботу з виїздом. 3–4 речення, простою теплою мовою.</p>
+      <div class="certs">
+        <div data-i18n="about.cert1">Диплом /<br>сертифікат</div>
+        <div data-i18n="about.cert2">Сертифікат<br>курсу</div>
+        <div data-i18n="about.cert2">Сертифікат<br>курсу</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 data-i18n="about.get">Що ви отримуєте</h3>
+      <ul class="checks">
+        <li data-i18n="about.g1">Професійний складаний масажний стіл</li>
+        <li data-i18n="about.g2">Чиста одноразова або свіжовипрана білизна для кожного клієнта</li>
+        <li data-i18n="about.g3">Гіпоалергенні олії — або ваша, якщо маєте вподобання</li>
+        <li data-i18n="about.g4">Дезінфекція столу й рук до та після сеансу</li>
+        <li data-i18n="about.g5">Пунктуальність: попереджаю, якщо затримуюсь</li>
+        <li data-i18n="about.g6">Оплата готівкою або переказом на картку після сеансу</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" style="padding-top:24px">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="rev.eyebrow">Відгуки</span>
+    <h2 data-i18n="rev.title">Що кажуть клієнти</h2>
+    <!-- Додайте справжні відгуки клієнтів (з їхньої згоди) або посилання на відгуки в Google -->
+    <div class="grid-3" style="margin-top:28px">
+      <div class="card review"><div class="stars">★★★★★</div><p data-i18n="rev.ph">Тут буде справжній відгук клієнта.</p><footer data-i18n="rev.who">Ім'я клієнта, район</footer></div>
+      <div class="card review"><div class="stars">★★★★★</div><p data-i18n="rev.ph">Тут буде справжній відгук клієнта.</p><footer data-i18n="rev.who">Ім'я клієнта, район</footer></div>
+      <div class="card review"><div class="stars">★★★★★</div><p data-i18n="rev.ph">Тут буде справжній відгук клієнта.</p><footer data-i18n="rev.who">Ім'я клієнта, район</footer></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRAINDICATIONS -->
+<section id="contra" style="padding-top:24px">
+  <div class="wrap">
+    <div class="card warn">
+      <h3 data-i18n="con.title">Коли масаж не можна або треба порадитися з лікарем</h3>
+      <p data-i18n="con.lead">Будь ласка, повідомте мене заздалегідь, якщо у вас є щось із цього списку:</p>
+      <ul>
+        <li data-i18n="con.1">Підвищена температура, застуда, загальне нездужання</li>
+        <li data-i18n="con.2">Гострі запалення й болі невідомого походження</li>
+        <li data-i18n="con.3">Шкірні захворювання, рани, грибок у зоні масажу</li>
+        <li data-i18n="con.4">Тромбоз, варикоз у тяжкій формі</li>
+        <li data-i18n="con.5">Онкологічні захворювання</li>
+        <li data-i18n="con.6">Серйозні захворювання серця, високий тиск</li>
+        <li data-i18n="con.7">Вагітність (потрібна консультація лікаря)</li>
+        <li data-i18n="con.8">Нещодавні травми й операції</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:780px">
+    <span class="eyebrow" data-i18n="faq.eyebrow">Часті питання</span>
+    <h2 data-i18n="faq.title">Питання та відповіді</h2>
+    <details><summary data-i18n="faq.1q">Що потрібно підготувати до мого приїзду?</summary><p data-i18n="faq.1a">Лише вільне місце близько 2×2 метри та комфортну температуру в кімнаті. Стіл, білизну, рушники й олії я привожу з собою. Бажано не їсти щільно за 1–1,5 години до сеансу.</p></details>
+    <details><summary data-i18n="faq.2q">У які райони Харкова ви виїжджаєте?</summary><p data-i18n="faq.2a">В усі райони міста. У віддалені райони та передмістя виїзд оплачується додатково — уточню вартість під час запису.</p></details>
+    <details><summary data-i18n="faq.3q">Чи можна записатися на вечір або вихідні?</summary><p data-i18n="faq.3a">Так, працюю щодня з 9:00 до 21:00. Вечірні та вихідні години розбирають швидше, тож краще записуватися заздалегідь.</p></details>
+    <details><summary data-i18n="faq.4q">Що буде, якщо оголосять повітряну тривогу?</summary><p data-i18n="faq.4a">Безпека понад усе. Якщо тривога починається до виїзду — перенесемо сеанс на зручний час без доплат. Якщо під час сеансу — діємо за ситуацією, разом вирішимо, продовжувати чи перенести.</p></details>
+    <details><summary data-i18n="faq.5q">Як скасувати або перенести запис?</summary><p data-i18n="faq.5a">Напишіть або зателефонуйте хоча б за 3 години до сеансу — перенесемо без проблем.</p></details>
+    <details><summary data-i18n="faq.6q">Як оплатити?</summary><p data-i18n="faq.6a">Готівкою або переказом на картку після сеансу.</p></details>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="booking">
+  <div class="wrap form-grid">
+    <div class="side-info">
+      <span class="eyebrow" data-i18n="bk.eyebrow">Запис</span>
+      <h2 data-i18n="bk.title">Залиште заявку</h2>
+      <p class="lead" data-i18n="bk.lead">Я зв'яжуся з вами в зручному месенджері, щоб підтвердити час і адресу.</p>
+      <p data-i18n="bk.hours">Щодня 9:00–21:00<br>Зазвичай відповідаю протягом години</p>
+    </div>
+    <form id="bookingForm" novalidate>
+      <div class="field"><label for="f-name" data-i18n="f.name">Ваше ім'я *</label><input id="f-name" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="f-phone" data-i18n="f.phone">Телефон *</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+380"></div>
+      <div class="field full">
+        <label data-i18n="f.how">Як з вами зв'язатися?</label>
+        <div class="radios">
+          <label><input type="radio" name="messenger" value="Telegram" checked> Telegram</label>
+          <label><input type="radio" name="messenger" value="Viber"> Viber</label>
+          <label><input type="radio" name="messenger" value="WhatsApp"> WhatsApp</label>
+          <label><input type="radio" name="messenger" value="call"> <span data-i18n="f.call">Дзвінок</span></label>
+        </div>
+      </div>
+      <div class="field full"><label for="f-service" data-i18n="f.service">Вид масажу</label>
+        <select id="f-service" name="service">
+          <option data-i18n="srv.1t">Класичний масаж усього тіла</option>
+          <option data-i18n="srv.2t">Спина та шийно-комірцева зона</option>
+          <option data-i18n="srv.3t">Розслаблювальний масаж</option>
+          <option data-i18n="srv.4t">Спортивний масаж</option>
+          <option data-i18n="srv.5t">Лімфодренажний масаж</option>
+          <option data-i18n="srv.6t">Подарунковий сертифікат</option>
+          <option data-i18n="f.consult">Не знаю, потрібна консультація</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-date" data-i18n="f.date">Бажана дата</label><input id="f-date" name="date" type="date"></div>
+      <div class="field"><label for="f-time" data-i18n="f.time">Час</label>
+        <select id="f-time" name="time">
+          <option data-i18n="f.t0">Будь-який</option>
+          <option data-i18n="f.t1">Ранок (9–12)</option>
+          <option data-i18n="f.t2">День (12–17)</option>
+          <option data-i18n="f.t3">Вечір (17–21)</option>
+        </select>
+      </div>
+      <div class="field full"><label for="f-district" data-i18n="f.district">Район Харкова</label>
+        <select id="f-district" name="district">
+          <option data-i18n="d.1">Шевченківський</option>
+          <option data-i18n="d.2">Київський</option>
+          <option data-i18n="d.3">Салтівський</option>
+          <option data-i18n="d.4">Немишлянський</option>
+          <option data-i18n="d.5">Індустріальний</option>
+          <option data-i18n="d.6">Слобідський</option>
+          <option data-i18n="d.7">Основ'янський</option>
+          <option data-i18n="d.8">Холодногірський</option>
+          <option data-i18n="d.9">Новобаварський</option>
+          <option data-i18n="d.10">Передмістя</option>
+        </select>
+      </div>
+      <div class="field full"><label for="f-comment" data-i18n="f.comment">Коментар</label><textarea id="f-comment" name="comment" data-i18n-ph="f.commentPh" placeholder="Наприклад: болить поперек, є протипоказання, не працює домофон…"></textarea></div>
+      <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent full"><input type="checkbox" id="f-consent" required> <span data-i18n="f.consent">Я погоджуюся на обробку моїх даних для зв'язку зі мною щодо цієї заявки</span></label>
+      <div class="full"><button class="btn btn-primary" type="submit" id="f-submit" style="width:100%" data-i18n="f.submit">Надіслати заявку</button></div>
+      <div class="form-status" id="formStatus" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="ct.eyebrow">Контакти</span>
+    <h2 data-i18n="ct.title">Напишіть або зателефонуйте</h2>
+    <div class="contacts">
+      <a class="contact" href="#" data-link="phone"><span class="ic" style="background:#9c5b3f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small data-i18n="ct.phone">Телефон</small><b data-text="phoneDisplay">+38 (000) 000-00-00</b></span></a>
+      <a class="contact" href="#" data-link="telegram" target="_blank" rel="noopener"><span class="ic" style="background:#2aabee"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2l-11 6.9-4.7-1.5c-1-.3-1-1 .2-1.5L20.5 3c.9-.3 1.6.2 1.4 1.3z"/></svg></span><span><small>Telegram</small><b data-text="telegramDisplay">@username</b></span></a>
+      <a class="contact" href="#" data-link="whatsapp" target="_blank" rel="noopener"><span class="ic" style="background:#25d366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></span><span><small>WhatsApp</small><b data-text="phoneDisplay">+38 (000) 000-00-00</b></span></a>
+      <a class="contact" href="#" data-link="viber"><span class="ic" style="background:#7360f2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 1C8.9 1 3.4 1.5 2.2 7.2c-.5 2.3-.5 5 .3 7.3.6 1.9 2 3.3 3.6 4.1v3.5c0 .6.7.9 1.1.5l2.9-3c4.4.3 9.4-.6 11-4.4 1.200-3 1.1-7.4-.8-10C18.4 2.3 15 1 11.4 1zm4.9 14.6c-.4.7-1.2 1.3-2 1-2.8-1.1-5.3-3.4-6.6-6.1-.3-.7-.5-1.4-.5-1.8.1-.8.9-1.6 1.6-1.7.3 0 .6.1.8.4l1 1.4c.3.4.2 1-.2 1.3l-.4.3c-.3.2-.3.6-.2.9.6 1.2 1.6 2.300 2.8 2.9.3.2.7.1.9-.2l.3-.4c.3-.4.9-.5 1.3-.2l1.4 1c.4.3.4.8 0 1.2z"/></svg></span><span><small>Viber</small><b data-text="phoneDisplay">+38 (000) 000-00-00</b></span></a>
+      <a class="contact" href="#" data-link="email"><span class="ic" style="background:#6b7f6a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span><small data-i18n="ct.email">Пошта</small><b data-text="email">email@example.com</b></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    © <span id="year"></span> <span data-text="name">Ім'я Прізвище</span> · <span data-i18n="ft.1">Масаж з виїздом додому, Харків.</span><br>
+    <span data-i18n="ft.2">Масаж не є медичною послугою і не замінює лікування.</span>
+  </div>
+</footer>
+
+<nav class="mbar">
+  <a href="#" data-link="phone" data-i18n="mbar.call">Дзвінок</a>
+  <a href="#" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
+  <a href="#booking" class="main" data-i18n="btn.book">Записатися</a>
+</nav>
+
+<script>
+/* ============================================================
+   НАЛАШТУВАННЯ / НАСТРОЙКИ — замініть заглушки на свої дані
+   ============================================================ */
+const CONFIG = {
+  name:      { uk: "Ім'я Прізвище", ru: "Имя Фамилия" },
+  firstName: { uk: "Ім'я",          ru: "Имя" },
+  phone: "+380000000000",               // для посилань: лише + і цифри
+  phoneDisplay: "+38 (000) 000-00-00",  // як показувати на сайті
+  telegram: "username",                 // нік без @
+  whatsapp: "380000000000",             // номер без + і пробілів
+  viber: "+380000000000",
+  email: "email@example.com",
+
+  // Надсилання форми на пошту через Web3Forms (безкоштовно):
+  // 1) зайдіть на web3forms.com, введіть свою пошту, отримайте Access Key
+  // 2) вставте його сюди. Поки порожньо — форма запропонує надіслати заявку
+  //    у WhatsApp, Telegram або на пошту.
+  web3formsKey: ""
+};
+
+/* ============================================================
+   РУССКИЙ ТЕКСТ (ключи совпадают с data-i18n в HTML)
+   ============================================================ */
+const RU = {
+  "meta.title": "Массаж с выездом на дом в Харькове",
+  "meta.desc": "Профессиональный массаж у вас дома в Харькове: классический, расслабляющий, спортивный, лимфодренажный. Свой массажный стол, чистое бельё, выезд по всем районам города.",
+  "logo.sub": "Массаж на дому · Харьков",
+  "nav.how": "Как проходит", "nav.services": "Услуги и цены", "nav.about": "Обо мне", "nav.faq": "Вопросы", "nav.contacts": "Контакты",
+  "btn.book": "Записаться", "btn.call": "Позвонить", "mbar.call": "Позвонить",
+  "hero.eyebrow": "Выезд по всему Харькову",
+  "hero.title": "Массаж у вас дома — <em>без дороги и спешки</em>",
+  "hero.lead": "Приеду в удобное время со своим массажным столом, чистым бельём и маслами. Вам остаётся только расслабиться — а после сеанса не нужно никуда ехать.",
+  "hero.book": "Записаться на сеанс",
+  "hero.photo": "Ваше фото<br>(вертикальное, 4:5)",
+  "chip.1": "Свой стол и чистое бельё", "chip.2": "Ежедневно 9:00–21:00", "chip.3": "Все районы города",
+  "how.eyebrow": "Как проходит выезд", "how.title": "Четыре простых шага",
+  "how.1t": "Заявка", "how.1": "Оставьте заявку на сайте или напишите в мессенджер. Отвечу в течение часа.",
+  "how.2t": "Согласуем детали", "how.2": "Уточним вид массажа, время, адрес и есть ли противопоказания.",
+  "how.3t": "Приезжаю к вам", "how.3": "Нужно только свободное место около 2×2 м. Всё остальное привезу с собой.",
+  "how.4t": "Сеанс и отдых", "how.4": "После массажа можно сразу лечь отдыхать — никуда не нужно ехать.",
+  "srv.eyebrow": "Услуги и цены", "srv.title": "Выберите свой массаж",
+  "srv.lead": "Цена указана с выездом в пределах города. Время — чистое время массажа, без подготовки.",
+  "srv.1t": "Классический массаж всего тела", "srv.1": "Спина, шея, руки, ноги. Снимает напряжение и усталость, улучшает кровообращение.",
+  "srv.2t": "Спина и шейно-воротниковая зона", "srv.2": "Для тех, кто много сидит за компьютером. Помогает при зажатости плеч и шеи.",
+  "srv.3t": "Расслабляющий массаж", "srv.3": "Мягкие медленные техники с ароматическими маслами. Для глубокого отдыха и сна.",
+  "srv.4t": "Спортивный массаж", "srv.4": "Восстановление после тренировок, работа с забитыми мышцами.",
+  "srv.5t": "Лимфодренажный массаж", "srv.5": "Уменьшает отёчность и ощущение тяжести в ногах.",
+  "srv.6t": "Подарочный сертификат", "srv.6": "Подарите близкому человеку час отдыха. Действует 3 месяца, на любой вид массажа.",
+  "srv.anysum": "любая сумма", "from": "от", "min": "мин",
+  "srv.note": "Выезд в отдалённые районы и пригород — доплата ___ грн. Абонемент на 5 сеансов — скидка 10%.",
+  "about.eyebrow": "Обо мне", "about.hello": "Здравствуйте, я",
+  "about.lead": "Массажист с опытом ___ лет. Коротко о себе: где учились, в чём специализируетесь, почему выбрали работу с выездом. 3–4 предложения, простым тёплым языком.",
+  "about.cert1": "Диплом /<br>сертификат", "about.cert2": "Сертификат<br>курса",
+  "about.get": "Что вы получаете",
+  "about.g1": "Профессиональный складной массажный стол",
+  "about.g2": "Чистое одноразовое или свежевыстиранное бельё для каждого клиента",
+  "about.g3": "Гипоаллергенные масла — или ваше, если есть предпочтения",
+  "about.g4": "Дезинфекция стола и рук до и после сеанса",
+  "about.g5": "Пунктуальность: предупреждаю, если задерживаюсь",
+  "about.g6": "Оплата наличными или переводом на карту после сеанса",
+  "rev.eyebrow": "Отзывы", "rev.title": "Что говорят клиенты",
+  "rev.ph": "Здесь будет реальный отзыв клиента.", "rev.who": "Имя клиента, район",
+  "con.title": "Когда массаж нельзя или нужно посоветоваться с врачом",
+  "con.lead": "Пожалуйста, сообщите мне заранее, если у вас есть что-то из этого списка:",
+  "con.1": "Повышенная температура, простуда, общее недомогание",
+  "con.2": "Острые воспаления и боли неясного происхождения",
+  "con.3": "Кожные заболевания, раны, грибок в зоне массажа",
+  "con.4": "Тромбоз, варикоз в тяжёлой форме",
+  "con.5": "Онкологические заболевания",
+  "con.6": "Серьёзные заболевания сердца, высокое давление",
+  "con.7": "Беременность (нужна консультация врача)",
+  "con.8": "Недавние травмы и операции",
+  "faq.eyebrow": "Частые вопросы", "faq.title": "Вопросы и ответы",
+  "faq.1q": "Что нужно подготовить к моему приезду?",
+  "faq.1a": "Только свободное место около 2×2 метра и комфортную температуру в комнате. Стол, бельё, полотенца и масла я привожу с собой. Желательно не есть плотно за 1–1,5 часа до сеанса.",
+  "faq.2q": "В какие районы Харькова вы выезжаете?",
+  "faq.2a": "Во все районы города. В отдалённые районы и пригород выезд оплачивается дополнительно — уточню стоимость при записи.",
+  "faq.3q": "Можно ли записаться на вечер или выходные?",
+  "faq.3a": "Да, работаю ежедневно с 9:00 до 21:00. Вечерние и выходные часы разбирают быстрее, лучше записываться заранее.",
+  "faq.4q": "Что будет, если объявят воздушную тревогу?",
+  "faq.4a": "Безопасность прежде всего. Если тревога начинается до выезда — перенесём сеанс на удобное время без доплат. Если во время сеанса — действуем по ситуации, вместе решим, продолжать или перенести.",
+  "faq.5q": "Как отменить или перенести запись?",
+  "faq.5a": "Напишите или позвоните хотя бы за 3 часа до сеанса — перенесём без проблем.",
+  "faq.6q": "Как оплатить?", "faq.6a": "Наличными или переводом на карту после сеанса.",
+  "bk.eyebrow": "Запись", "bk.title": "Оставьте заявку",
+  "bk.lead": "Я свяжусь с вами в удобном мессенджере, чтобы подтвердить время и адрес.",
+  "bk.hours": "Ежедневно 9:00–21:00<br>Обычно отвечаю в течение часа",
+  "f.name": "Ваше имя *", "f.phone": "Телефон *", "f.how": "Как с вами связаться?", "f.call": "Звонок",
+  "f.service": "Вид массажа", "f.consult": "Не знаю, нужна консультация",
+  "f.date": "Желаемая дата", "f.time": "Время",
+  "f.t0": "Любое", "f.t1": "Утро (9–12)", "f.t2": "День (12–17)", "f.t3": "Вечер (17–21)",
+  "f.district": "Район Харькова",
+  "d.1": "Шевченковский", "d.2": "Киевский", "d.3": "Салтовский", "d.4": "Немышлянский", "d.5": "Индустриальный",
+  "d.6": "Слободской", "d.7": "Основянский", "d.8": "Холодногорский", "d.9": "Новобаварский", "d.10": "Пригород",
+  "f.comment": "Комментарий",
+  "f.commentPh": "Например: болит поясница, есть противопоказания, не работает домофон…",
+  "f.consent": "Я согласен(на) на обработку моих данных для связи со мной по этой заявке",
+  "f.submit": "Отправить заявку",
+  "ct.eyebrow": "Контакты", "ct.title": "Напишите или позвоните", "ct.phone": "Телефон", "ct.email": "Почта",
+  "ft.1": "Массаж с выездом на дом, Харьков.",
+  "ft.2": "Массаж не является медицинской услугой и не заменяет лечение."
+};
+
+/* Повідомлення форми / сообщения формы */
+const MSG = {
+  uk: {
+    errFields: "Будь ласка, вкажіть ім'я та номер телефону.",
+    errConsent: "Будь ласка, позначте згоду на обробку даних.",
+    sending: "Надсилаю…",
+    ok: "<b>Дякую, заявку надіслано!</b><br>Я зв'яжуся з вами найближчим часом.",
+    fail: "Не вдалося надіслати заявку. Напишіть мені напряму:",
+    almost: "<b>Заявка майже готова.</b> Оберіть, куди її надіслати — текст уже заповнено:",
+    copyTg: "Скопіювати й відкрити Telegram", mail: "Пошта", copied: "Скопійовано — вставте в чат",
+    subject: "Заявка на масаж", mName: "Ім'я", mPhone: "Телефон", mVia: "Зв'язок", mService: "Послуга",
+    mDate: "Дата", mTime: "час", mDistrict: "Район", mComment: "Коментар", noDate: "не вказана", locale: "uk-UA"
+  },
+  ru: {
+    errFields: "Пожалуйста, укажите имя и номер телефона.",
+    errConsent: "Пожалуйста, отметьте согласие на обработку данных.",
+    sending: "Отправляю…",
+    ok: "<b>Спасибо, заявка отправлена!</b><br>Я свяжусь с вами в ближайшее время.",
+    fail: "Не получилось отправить заявку. Напишите мне напрямую:",
+    almost: "<b>Заявка почти готова.</b> Выберите, куда её отправить — текст уже заполнен:",
+    copyTg: "Скопировать и открыть Telegram", mail: "Почта", copied: "Скопировано — вставьте в чат",
+    subject: "Заявка на массаж", mName: "Имя", mPhone: "Телефон", mVia: "Связь", mService: "Услуга",
+    mDate: "Дата", mTime: "время", mDistrict: "Район", mComment: "Комментарий", noDate: "не указана", locale: "ru-RU"
+  }
+};
+
+/* ---------- мови / языки ---------- */
+const metaDesc = document.querySelector('meta[name="description"]');
+const UK = { "meta.desc": metaDesc.content };
+document.querySelectorAll("[data-i18n]").forEach(el => { UK[el.dataset.i18n] ??= el.innerHTML; });
+document.querySelectorAll("[data-i18n-ph]").forEach(el => { UK[el.dataset.i18nPh] = el.placeholder; });
+const DICT = { uk: UK, ru: RU };
+let lang = "uk";
+
+function setLang(l) {
+  lang = DICT[l] ? l : "uk";
+  const d = DICT[lang];
+  const t = k => d[k] ?? UK[k];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  document.title = t("meta.title") + " — " + CONFIG.name[lang];
+  metaDesc.content = t("meta.desc");
+  document.querySelectorAll("[data-text]").forEach(el => {
+    const v = el.dataset.text;
+    const val = v === "telegramDisplay" ? "@" + CONFIG.telegram
+      : (CONFIG[v] && typeof CONFIG[v] === "object") ? CONFIG[v][lang] : CONFIG[v];
+    if (val) el.textContent = val;
+  });
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  statusEl.className = "form-status"; statusEl.innerHTML = "";
+  try { localStorage.setItem("lang", lang); } catch (_) {}
+  const url = new URL(location.href);
+  if (lang === "uk") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);
+  history.replaceState(null, "", url);
+}
+
+/* ---------- контакти ---------- */
+const links = {
+  phone: "tel:" + CONFIG.phone,
+  telegram: "https://t.me/" + CONFIG.telegram,
+  whatsapp: "https://wa.me/" + CONFIG.whatsapp,
+  viber: "viber://chat?number=" + encodeURIComponent(CONFIG.viber),
+  email: "mailto:" + CONFIG.email
+};
+document.querySelectorAll("[data-link]").forEach(el => { el.href = links[el.dataset.link]; });
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ---------- форма ---------- */
+const form = document.getElementById("bookingForm");
+const statusEl = document.getElementById("formStatus");
+const submitBtn = document.getElementById("f-submit");
+document.getElementById("f-date").min = new Date().toISOString().slice(0, 10);
+
+function showStatus(type, html) { statusEl.className = "form-status " + type; statusEl.innerHTML = html; }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const m = MSG[lang];
+  const d = Object.fromEntries(new FormData(form));
+  if (d.botcheck) return; // спам-бот
+
+  if (!d.name.trim() || d.phone.replace(/\D/g, "").length < 9) { showStatus("err", m.errFields); return; }
+  if (!document.getElementById("f-consent").checked) { showStatus("err", m.errConsent); return; }
+
+  const via = d.messenger === "call" ? (DICT[lang]["f.call"] ?? UK["f.call"]) : d.messenger;
+  const dateStr = d.date ? new Date(d.date + "T12:00").toLocaleDateString(m.locale) : m.noDate;
+  const message =
+    m.subject + " (" + lang.toUpperCase() + ")\n" +
+    m.mName + ": " + d.name.trim() + "\n" +
+    m.mPhone + ": " + d.phone.trim() + "\n" +
+    m.mVia + ": " + via + "\n" +
+    m.mService + ": " + d.service + "\n" +
+    m.mDate + ": " + dateStr + ", " + m.mTime + ": " + d.time + "\n" +
+    m.mDistrict + ": " + d.district +
+    (d.comment.trim() ? "\n" + m.mComment + ": " + d.comment.trim() : "");
+
+  // Варіант 1: надсилання на пошту через Web3Forms
+  if (CONFIG.web3formsKey) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = m.sending;
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ access_key: CONFIG.web3formsKey, subject: m.subject + " — " + d.name.trim(), from_name: "Сайт", message })
+      });
+      const json = await res.json();
+      if (!json.success) throw new Error(json.message);
+      form.reset();
+      showStatus("ok", m.ok);
+    } catch (err) {
+      showStatus("err", m.fail + fallbackButtons(message));
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = DICT[lang]["f.submit"] ?? UK["f.submit"];
+    }
+    return;
+  }
+
+  // Варіант 2 (поки немає ключа): надсилання через месенджер або пошту
+  showStatus("ok", m.almost + fallbackButtons(message));
+});
+
+function fallbackButtons(message) {
+  const m = MSG[lang], t = encodeURIComponent(message);
+  return '<div class="fallback">' +
+    '<a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/' + CONFIG.whatsapp + '?text=' + t + '">WhatsApp</a>' +
+    '<button class="btn btn-ghost" type="button" data-copy="' + esc(message) + '">' + m.copyTg + '</button>' +
+    '<a class="btn btn-ghost" href="mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(m.subject) + '&body=' + t + '">' + m.mail + '</a>' +
+    '</div>';
+}
+
+statusEl.addEventListener("click", async (e) => {
+  const btn = e.target.closest("[data-copy]");
+  if (!btn) return;
+  try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (_) {}
+  btn.textContent = MSG[lang].copied;
+  window.open("https://t.me/" + CONFIG.telegram, "_blank", "noopener");
+});
+
+/* ---------- старт: ?lang=ru → збережений вибір → мова браузера ---------- */
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+(function () {
+  const fromUrl = new URLSearchParams(location.search).get("lang");
+  let saved = null; try { saved = localStorage.getItem("lang"); } catch (_) {}
+  const browser = (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "uk";
+  setLang(fromUrl || saved || browser);
+})();
+</script>
+</body>
+</html>
