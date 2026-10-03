@@ -206,13 +206,13 @@ textarea{min-height:110px;resize:vertical}
 
 /* Contacts */
 .contacts{display:grid;gap:12px;margin-top:26px}
-@media(min-width:680px){.contacts{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
+@media(min-width:680px){.contacts{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}}
 .contact{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;transition:border-color .15s}
 .contact:hover{border-color:var(--accent)}
 .contact .ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff}
 .contact .ic svg{width:20px;height:20px}
 .contact small{display:block;color:var(--muted);font-size:.8rem}
-.contact b{font-weight:700;font-size:.95rem;word-break:break-all}
+.contact b{font-weight:700;font-size:.95rem;white-space:nowrap}
 
 footer.site{padding:32px 0 110px;color:var(--muted);font-size:.86rem;border-top:1px solid var(--line)}
 @media(min-width:880px){footer.site{padding-bottom:32px}}
@@ -427,28 +427,6 @@ footer.site{padding:32px 0 110px;color:var(--muted);font-size:.86rem;border-top:
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section id="reviews" style="padding-top:16px">
-  <div class="wrap">
-    <span class="eyebrow" data-i18n="rev.eyebrow">Відгуки пацієнтів</span>
-    <h2 data-i18n="rev.title">Що кажуть пацієнти</h2>
-    <div class="grid-3" style="margin-top:24px">
-      <div class="card review">
-        <p data-i18n="rev.1">«Приводила сина-підлітка зі сколіозом. Після курсу масажу та рекомендацій щодо вправ постава значно покращилася. Дуже задоволена результатом і ставленням до пацієнта.»</p>
-        <footer><b data-i18n="rev.1n">Катерина</b><span data-i18n="rev.1t">Лікувальний масаж · 10 сеансів</span></footer>
-      </div>
-      <div class="card review">
-        <p data-i18n="rev.2">«Страждав від хронічного болю в шиї через сидячу роботу. Після курсу масажу та мануальної терапії біль повністю зник. Спеціаліст пояснив, як правильно сидіти й які вправи робити для профілактики.»</p>
-        <footer><b data-i18n="rev.2n">Віктор</b><span data-i18n="rev.2t">Масаж шиї та мануальні техніки · 8 сеансів</span></footer>
-      </div>
-      <div class="card review">
-        <p data-i18n="rev.3">«Після курсу масажу в мене повністю минув біль у спині, який мучив мене кілька років. Спеціаліст дуже уважний, знає свою справу. Рекомендую всім, у кого проблеми з хребтом!»</p>
-        <footer><b data-i18n="rev.3n">Анна</b><span data-i18n="rev.3t">Лікувальний масаж</span></footer>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap" style="max-width:780px">
@@ -629,13 +607,6 @@ const RU = {
   "sched.t": "График работы", "sched.am": "До обеда", "sched.amT": "Приём по основному месту работы",
   "sched.pm": "После обеда", "sched.pmT": "Выезд к пациентам на дом",
   "sched.note": "Время выезда согласовываем заранее. Курсовых пациентов записываю на постоянное время.",
-  "rev.eyebrow": "Отзывы пациентов", "rev.title": "Что говорят пациенты",
-  "rev.1": "«Приводила сына-подростка со сколиозом. После курса массажа и рекомендаций по упражнениям осанка значительно улучшилась. Очень довольна результатом и отношением к пациенту.»",
-  "rev.1n": "Екатерина", "rev.1t": "Лечебный массаж · 10 сеансов",
-  "rev.2": "«Страдал от хронических болей в шее из-за сидячей работы. После курса массажа и мануальной терапии боли полностью исчезли. Специалист объяснил, как правильно сидеть и делать упражнения для профилактики.»",
-  "rev.2n": "Виктор", "rev.2t": "Массаж шеи и мануальные техники · 8 сеансов",
-  "rev.3": "«После курса массажа у меня полностью прошли боли в спине, которые мучили меня несколько лет. Специалист очень внимательный, знающий своё дело. Рекомендую всем, кто страдает от проблем с позвоночником!»",
-  "rev.3n": "Анна", "rev.3t": "Лечебный массаж",
   "faq.eyebrow": "Частые вопросы", "faq.title": "Вопросы и ответы",
   "faq.1q": "Нужно ли направление от врача?",
   "faq.1a": "Не обязательно. Но если есть диагноз, выписка или снимки (МРТ, рентген) — покажите их на первом визите. После инсульта, операций и при острых состояниях массаж нужно согласовать с лечащим врачом.",
